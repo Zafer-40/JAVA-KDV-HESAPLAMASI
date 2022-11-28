@@ -1,0 +1,11 @@
+double tutar , kdv1 = 0.18,kdv2 = 0.08 , kdvTutari, kdvli ;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Fiyat Giriniz : ");
+        tutar = input.nextDouble();
+        kdvTutari = (tutar >= 0 && tutar <= 1000) ? (tutar*kdv1) : (tutar*kdv2);
+        kdvli = kdvTutari + tutar;
+        String oran  = (tutar >= 0 && tutar <= 1000) ? "KDV Orani - 18%" : "KDV Orani - 8%";
+        System.out.println("Urunun KDV'siz fiyati :" + tutar);
+        System.out.println(oran);
+        System.out.println("KDV Tutari :" + kdvTutari );
+        System.out.println("Urunun KDV'li fiyati :" + kdvli);
